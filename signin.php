@@ -1,4 +1,4 @@
-
+<?php include "db/dbconfig.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -110,22 +110,23 @@
          <div class="container">
             <!-- <div class="row"> -->
            
-                  <form class="container-fluid text-center col-xl-4 col-lg-4 " >
+                  <form method="post" action="process_login.php" class="container-fluid text-center col-xl-4 col-lg-4 " >
+                     <?php if (isset($_GET['error'])){echo "<button class='btn btn-sm text-danger'>Invalid Credentials </button>";}?>
                      <div class="mb-4  ">
                      <!-- <label for="exampleInputEmail1" class="form-label px-3 ">Email address</label> -->
-                     <input type="email" class="form-control" placeholder="Email address"  id="exampleInputEmail1" class="form-signin" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" placeholder="Email address"  id="exampleInputEmail1" class="form-signin" aria-describedby="emailHelp">
                      </div>
                      <div class="mb-4 ">
                      <!-- <label for="exampleInputPassword1" class="form-label px-3">Password</label> -->
-                     <input type="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
+                        <input type="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
                      </div>
                      <div class="mb-4 form-check ">
-                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                     <label class="form-check-label" for="exampleCheck1">Remember-me!</label>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Remember-me!</label>
                      </div>
-                     <button type="submit" class="btn btn-primary">Sign in</button>
+                        <button type="submit" class="btn btn-primary">Sign in</button>
                      <div class="mb-4 text-center">
-                     <label>Don't have an account?</label>
+                        <label>Don't have an account?</label>
                      <div class="nav-link btn-link">
                         <a class="nav-link btn-link" href="register.html">Register here</a>
                      </div>

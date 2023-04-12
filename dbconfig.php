@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "edson000";
-$dbname = "greenagro";
+$dbname = "patodb";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 // start session
