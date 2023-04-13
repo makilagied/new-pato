@@ -52,12 +52,12 @@ $farm_condition = generateRandomSoilConditions();
       <!-- Sidebar Header    -->
       <div class="sidebar-header d-flex align-items-center justify-content-center p-3 mb-3">
         <!-- User Info-->
-        <div class="sidenav-header-inner text-center"><img id="logo" class="dashlog" src="img/Group 6.png" alt="#" />
+        <div class="sidenav-header-inner text-center"><img id="logo" class="dashlog" src="images/logo.png" alt="#" />
           <!-- <h2 class="h5 text-white text-uppercase mb-0">Nathan Andrews</h2>
             <p class="text-sm mb-0 text-muted">Web Developer</p> -->
         </div>
         <!-- Small Brand information, appears on minimized sidebar--><a class="brand-small text-center" href="index.html">
-          <p class="h1 m-0">BD</p>
+          <p class="h1 m-0">PATO</p>
         </a>
       </div>
       <!-- Sidebar Navigation Menus--><span class="text-uppercase text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">Main</span>
@@ -65,12 +65,12 @@ $farm_condition = generateRandomSoilConditions();
         <li class="sidebar-item"><a class="sidebar-link" href="dashboard.php">
             <svg class="svg-icon svg-icon-sm svg-icon-heavy me-2">
               <use xlink:href="#real-estate-1"> </use>
-            </svg>Land </a></li>
+            </svg>Profile </a></li>
 
         <li class="sidebar-item"><a class="sidebar-link" href="soil_management.php">
             <svg class="svg-icon svg-icon-sm svg-icon-heavy me-2">
               <use xlink:href="#sales-up-1"> </use>
-            </svg>Soil & Crop monitoring </a></li>
+            </svg>Investment Progress </a></li>
         <li class="sidebar-item"><a class="sidebar-link" href="crop_survey.php">
             <svg class="svg-icon svg-icon-sm svg-icon-heavy me-2">
               <use xlink:href="#portfolio-grid-1"> </use>
@@ -159,7 +159,7 @@ $farm_condition = generateRandomSoilConditions();
             </div>
           </div>
           <!-- Count item widget-->
-          <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
+          <!-- <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
             <div class="d-flex">
               <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
                 <use xlink:href="#survey-1"> </use>
@@ -170,9 +170,9 @@ $farm_condition = generateRandomSoilConditions();
                 <p class="display-6 mb-0"><?php echo $farm_condition['nutrient_content'] ?> </p>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- Count item widget-->
-          <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
+          <!-- <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
             <div class="d-flex">
               <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
                 <use xlink:href="#list-details-1"> </use>
@@ -183,9 +183,9 @@ $farm_condition = generateRandomSoilConditions();
                 <p class="display-6 mb-0"><?php echo $farm_condition['pH_level'] ?></p>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- Count item widget-->
-          <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
+          <!-- <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
             <div class="d-flex">
               <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
                 <use xlink:href="#survey-1"> </use>
@@ -196,9 +196,9 @@ $farm_condition = generateRandomSoilConditions();
                 <p class="display-6 mb-0"><?php echo $farm_condition['soil_temp'] ?>° </p>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- Count item widget-->
-          <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
+          <!-- <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
             <div class="d-flex">
               <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
                 <use xlink:href="#numbers-1"> </use>
@@ -209,11 +209,11 @@ $farm_condition = generateRandomSoilConditions();
                 <p class="display-6 mb-0"> <?php echo $farm_condition['soil_texture'] ?></p>
               </div>
             </div>
-          </div>
+          </div> -->
 
 
           <!-- Count item widget-->
-          <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
+          <!-- <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
             <div class="d-flex">
               <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
                 <use xlink:href="#paper-stack-1"> </use>
@@ -226,7 +226,7 @@ $farm_condition = generateRandomSoilConditions();
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
     <!-- Header Section-->
     <section class="bg-white py-5">
@@ -243,11 +243,11 @@ $farm_condition = generateRandomSoilConditions();
           </div>
 
           <!-- To Do List-->
-          <div class="col-lg-3 col-md-6">
+          <!-- <div class="col-lg-3 col-md-6">
             <div class="card shadow-0">
               <div class="card-body p-0">
-                <h2 class="h3 fw-normal">To do List</h2>
-                <form>
+                <h2 class="h3 fw-normal">To do List</h2> -->
+                <!-- <form>
                   <h5>Actions to take based on soil changes:</h5>
                   <?php $i = rand(1, 3);
                   if ($i < 2) { ?>
@@ -286,17 +286,17 @@ $farm_condition = generateRandomSoilConditions();
                       <label class="form-check-label text-sm" for="list6">Organic matter content is too high, consider reducing the amount of organic matter added or planting crops that are less tolerant of high organic matter levels.</label>
                     </div>
                   <?php } ?>
-                </form>
+                </form> -->
                 <!-- for demonstration -->
 
 
-              </div>
+              <!-- </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-6"> -->
 
-            <div class="card green-card">
+            <!-- <div class="card green-card">
               <div class="card-header">
                 Soil Moisture
               </div>
@@ -349,7 +349,7 @@ $farm_condition = generateRandomSoilConditions();
                 <p>If the potassium content is too low, consider applying potassium fertilizers or planting cover crops that accumulate potassium in the soil.</p>
                 <p>If the potassium content is too high, consider reducing the amount of potassium fertilizer applied or planting crops that are less dependent on potassium.</p>
               </div>
-            </div>
+            </div> -->
 
           </div>
 
