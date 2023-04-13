@@ -1,137 +1,289 @@
 <?php
-include "db/dbconfig.php";
+include "dbconfig.php";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-
-    <title>Register | Green Agro Systems</title>
-</head>
-
-<body>
-    <!-- Topbar Start -->
-    <div class="container-fluid px-5 d-none d-lg-block">
-        <div class="row gx-5 py-3 align-items-center">
-            <div class="col-lg-3">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>PATO | pricing</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <!-- <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+      </div> -->
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-7 col-lg-7 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item ">
+                                 <a class="nav-link" href="index.html">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="about.html">About</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="we-do.html">Services</a>
+                              </li>
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="pricing.html">Invest</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="contact.html">Contact Us</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+                  <div class="col-md-2">
+                     <ul class="social_icon">
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/PatoSpace2?t=x3U5COBgivHGoustWfWCtQ&s=08"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="https://instagram.com/patospace_101?igshid=ZDdkNTZiNTM="><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
             </div>
-            <div class="col-lg-6">
-                <div class="d-flex align-items-center justify-content-center">
-                    <a href="index.html" class="navbar-brand ms-lg-5">
-                        <h1 class="m-0 display-4 text-primary">
-                            <img id="logo" src="img/Group 6.png" alt="#" />
-                        </h1>
-                    </a>
-                </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- banner -->
+      <div class="back_re">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="title">
+                     <h2>register here</h2>
+                  </div>
+               </div>
             </div>
-            <div class="col-lg-3">
-                <!-- <div class="d-flex align-items-center justify-content-end">
-                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-primary btn-square rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
-                </div> -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-5">
-        <a href="index.html" class="navbar-brand d-flex d-lg-none">
-            <h1 class="m-0 display-4 text-secondary">Green Agro Systems</h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav mx-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Project</a>
-
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-    <!-- Carousel Start -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 offset-md-4 mt-5">
-                <h1 class="text-center mb-4">Register</h1>
-                <form method="post" action="process_registration.php">
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" name="username"/>
+         </div>
+      </div>
+      <!-- our pricing -->
+      <div  class="pricing slin">
+         <div class="container">
+            <div class="container-fluid text-center col-xl-6 col-lg-6">
+              <!-- <div class="text-center col-xl-6 col-lg-6 "> -->
+           
+               <form method="post" action="process_registration.php">
+                    <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="first_name" name="first_name" placeholder="First Name" class="form-control" />
+                        <!-- <label class="form-label"  for="firstName">First Name</label> -->
+                      </div>
                     </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" />
+
+                    <!-- <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="midName" placeholder="Middle Name" class="form-control" />
+                        <label class="form-label"  for="firstName">First Name</label>
+                      </div>
+                    </div> -->
+
+                    <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="surname" name="surname"  placeholder="Surname" class="form-control" />
+                        <!-- <label class="form-label" for="lastName">Last Name</label> -->
+                      </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block mt-3">register</button>
-                    
-                    <div class="mx-5 nav-link btn-link">
-                        <a class="nav-link btn-link" href="login.php">login here</a>
+
+                    <div class=" mb-4">
+                      <div class="form-outline datepicker">
+                        <input type="text" class="form-control" id="dob" name="dob" placeholder="Birthday date"/>
+                        <!-- <label for="birthdayDate" class="form-label">Birthday</label> -->
+                      </div>
                     </div>
+
+                    <div class="justify-content-center text-center  mb-4">
+                        <label for="gender" class="form-label" id="gender" >Choose Gender</label>
+                           <div class=" form-check-inline">
+                              <label class="form-check-label" for="inlineCheckbox1">
+                                 <input class="form-check-input" type="radio" id="inlineCheckbox1" name="gender" value="male">
+                                 male</label>
+
+                              <label class="form-check-label" for="inlineCheckbox2">
+                                 <input class="form-check-input" type="radio" id="inlineCheckbox2" name="gender" value="female">
+                                 female</label>
+                           </div>
+                        <!-- <div class=" form-check-inline">
+                          
+                        </div> -->
+                    </div>
+
+                    <!-- <div class="justify-content-center text-center  mb-4">
+                        <label for="gender" class="form-label">Martial status</label>
+                        <div class=" form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox1">married</label>
+                        </div>
+                        <div class=" form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                          <label class="form-check-label" for="inlineCheckbox2">single</label>
+                        </div>
+                    </div> -->
+
+                    <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="email" id="email" name="email" placeholder="Email" class="form-control" />
+                        <!-- <label class="form-label" for="emailAddress">Email</label> -->
+                      </div>
+                    </div>
+
+                    <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="tel" id="phone" name="phone" placeholder="Mobile Number" class="form-control" />
+                        <!-- <label class="form-label" for="phoneNumber">Phone Number</label> -->
+                      </div>
+                    </div>
+
+                    <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="password" id="password" name="password" placeholder="password" class="form-control" />
+                        <!-- <label class="form-label" for="password">password</label> -->
+                      </div>
+                    </div>
+
+                    <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="password" id="conf_password" name="conf_password" placeholder="confirm password" class="form-control" />
+                        <!-- <label class="form-label" for="cpassword">confirm password</label> -->
+                      </div>
+                    </div>
+
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="col-12">
+                      <div class="col-md-4 mb-4">    
+                        <div class="mt-4">
+                          <input class="btn btn-warning btn-lg" type="submit" value="Submit" />
+                        </div>     
+                      </div>
+                    </div>
+
                 </form>
+               <!-- </div> -->
             </div>
-        </div>
-    </div>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-    <div class="container-fluid bg-dark text-white py-4">
-        <div class="container text-center">
-            <p class="mb-0">&copy; <a class="text-secondary fw-bold" href="#">Green Agro Inc</a>. All Rights Reserved.</p>
-        </div>
-    </div>
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-secondary py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-bAW/SxTksA3Yr3qTbdmZp9Tfj/uLl4op3/hD1zs6FO8x7RlK6eIFV6UHY41vU8b6" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
-
+         </div>
+      </div>
+      <!-- end our pricing -->
+     
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <ul class="conta">
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Passages of Lorem Ipsum available</li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i> Call : +012334567890</li>
+                        <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="www.patospace2022@gmail.com"> Patospace 2022</a></li>
+                     </ul>
+                  </div>
+                  <div class=" col-md-3 col-sm-6">
+                     <h3>About </h3>
+                     <p class="variat">Currently, P.A.T.O has more than 50 members who study in different universities in Tanzania sharing the same mission, vision and goals.</p>
+                  </div>
+                  <div class=" col-md-3 col-sm-6">
+                     <h3>Team </h3>
+                     <p class="variat" >We are a well equipped team of not only educated but also motivated youths who would stop at nothing to ensure that the set goals and objectives are seen through with in the planned window.</p>
+                  </div>
+                  <div class="col-md-2 col-sm-6">
+                     <h3>Useful Link</h3>
+                     <ul class="link_menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html"> About</a></li>
+                        <li><a href="we-do.html">Services</a></li>
+                        <li class="active"><a href="pricing.html">Invest</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                     <h3>Subscribe</h3>
+                     <form class="bottom_form">
+                        <a class="right_btn" href="Javascript:void(0)"> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
+                        <p >There are many variations of passages </p>
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-10 offset-md-1">
+                        <p>© 2023 All Rights Reserved. Design by  <a href="https://html.design/"> Free Html Templates</a> Customised by makilagied</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
 </html>
+

@@ -7,7 +7,19 @@ CREATE TABLE user (
   password TEXT
 );
 
-
+CREATE TABLE users (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(50) NOT NULL,
+  surname VARCHAR(50) NOT NULL,
+  dob INT NOT NULL,
+  gender ENUM('male', 'female') NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  phone VARCHAR(20) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  conf_password VARCHAR(255) NOT NULL;
+  terms_acc TINYINT(1) NOT NULL DEFAULT 0,
+  -- created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
 
 
 
