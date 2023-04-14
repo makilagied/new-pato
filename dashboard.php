@@ -1,4 +1,29 @@
 <?php
+include "dbconfig.php";
+
+function getuserdata()
+{
+  $pH_level = mt_rand(60, 70) / 10;  // random float between 6.0 and 7.0
+  $nutrient_content = mt_rand(80, 120);
+  $organic_matter = mt_rand(20, 40) / 10;  // random float between 2.0 and 4.0
+  $soil_texture_options = array("clayey", "sandy", "loamy");
+  $soil_texture = $soil_texture_options[array_rand($soil_texture_options)];
+  $soil_moisture = mt_rand(18, 30);  // random integer between 18 and 30
+  $soil_temp = mt_rand(15, 25);  // random integer between 15 and 25
+
+  return array(
+    "pH_level" => $pH_level,
+    "nutrient_content" => $nutrient_content,
+    "organic_matter" => $organic_matter,
+    "soil_texture" => $soil_texture,
+    "soil_moisture" => $soil_moisture,
+    "soil_temp" => $soil_temp
+  );
+}
+$user_data = getuserdata();
+?>
+
+<?php
 function generateRandomSoilConditions()
 {
   $pH_level = mt_rand(60, 70) / 10;  // random float between 6.0 and 7.0
@@ -20,6 +45,8 @@ function generateRandomSoilConditions()
 }
 $farm_condition = generateRandomSoilConditions();
 ?>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -60,7 +87,7 @@ $farm_condition = generateRandomSoilConditions();
           <p class="h1 m-0">PATO</p>
         </a>
       </div>
-      <!-- Sidebar Navigation Menus--><span class="text-uppercase text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">Main</span>
+      <!-- Sidebar Navigation Menus--><span class="text-uppercase text-center text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">Tabs</span>
       <ul class="list-unstyled">
         <li class="sidebar-item"><a class="sidebar-link" href="dashboard.php">
             <svg class="svg-icon svg-icon-sm svg-icon-heavy me-2">
