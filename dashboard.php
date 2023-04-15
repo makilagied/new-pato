@@ -279,7 +279,7 @@ $farm_condition = generateRandomSoilConditions();
           </div>
 
           <!-- pricing starts here -->
-        <div  class="pricing " id="add-investment" >
+        <div  class="pricing1 " id="add-investment" >
         <div class="">
             <div class="">
               <div class="row">
