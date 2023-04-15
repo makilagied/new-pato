@@ -1,26 +1,9 @@
 <?php
 include "dbconfig.php";
 
-function getuserdata()
-{
-  $pH_level = mt_rand(60, 70) / 10;  // random float between 6.0 and 7.0
-  $nutrient_content = mt_rand(80, 120);
-  $organic_matter = mt_rand(20, 40) / 10;  // random float between 2.0 and 4.0
-  $soil_texture_options = array("clayey", "sandy", "loamy");
-  $soil_texture = $soil_texture_options[array_rand($soil_texture_options)];
-  $soil_moisture = mt_rand(18, 30);  // random integer between 18 and 30
-  $soil_temp = mt_rand(15, 25);  // random integer between 15 and 25
 
-  return array(
-    "pH_level" => $pH_level,
-    "nutrient_content" => $nutrient_content,
-    "organic_matter" => $organic_matter,
-    "soil_texture" => $soil_texture,
-    "soil_moisture" => $soil_moisture,
-    "soil_temp" => $soil_temp
-  );
-}
-$user_data = getuserdata();
+
+
 ?>
 
 <?php
@@ -54,7 +37,7 @@ $farm_condition = generateRandomSoilConditions();
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Dashboard | PATO </title>
+  <title>PATO | Dashboard</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
@@ -68,6 +51,12 @@ $farm_condition = generateRandomSoilConditions();
   <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
   <!-- Custom stylesheet - for your changes-->
   <link rel="stylesheet" href="css/custom.css">
+  
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+      <!-- style css -->
+  <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+  <link rel="stylesheet" href="css/responsive.css">
   <!-- Favicon-->
   <link rel="shortcut icon" href="img/favicon.ico">
 </head>
@@ -84,7 +73,7 @@ $farm_condition = generateRandomSoilConditions();
             <p class="text-sm mb-0 text-muted">Web Developer</p> -->
         </div>
         <!-- Small Brand information, appears on minimized sidebar--><a class="brand-small text-center" href="index.html">
-          <p class="h1 m-0">PATO</p>
+          <p class="h1 m-0">P</p>
         </a>
       </div>
       <!-- Sidebar Navigation Menus--><span class="text-uppercase text-center text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">Tabs</span>
@@ -173,18 +162,37 @@ $farm_condition = generateRandomSoilConditions();
       <div class="container-fluid">
         <div class="row">
           <!-- Count item widget-->
-          <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
-            <div class="d-flex">
-              <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
+          <div class="col-xl-7 col-md-7 col-6 gy-4 gy-xl-0 col-sm-10"  style="box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);">
+            <div class="row " style="border-radius: 10%">
+                  <div class="col-4">
+                    <img src="images\profile.jpeg" class="img-fluid rounded-start"  alt="...">
+                  </div>
+                  <div class="col-8 sm-9 bg-light p-3">
+                      <h5 class="card-title h1"> <?php echo $_SESSION['user_name'] ?></h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">Last logged 3 mins ago</small></p>
+                      <div class="offset-lg-9 offset-md-9 offset-sm-9">
+                        <button class=" btn btn-primary" style=" border-radius: 5px;"> Edit </button>
+                      </div>
+                  </div>
+            </div>
+
+
+
+
+
+              <!-- <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
                 <use xlink:href="#user-1"> </use>
               </svg>
               <div class="ms-2">
                 <h3 class="h4 text-dark text-uppercase fw-normal">Soil moisture</h3>
                 <p class="text-gray-500 small">(status)</p>
                 <p class="display-6 mb-0"><?php echo $farm_condition['soil_moisture'] ?></p>
-              </div>
-            </div>
+              </div> -->
           </div>
+        </div>
+      </div>
+      
           <!-- Count item widget-->
           <!-- <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
             <div class="d-flex">
@@ -261,13 +269,181 @@ $farm_condition = generateRandomSoilConditions();
         <div class="row d-flex align-items-md-stretch">
 
           <!-- Line Chart -->
-          <div class="col-lg-6 col-md-12">
-            <div class="card shadow-0">
-              <h2 class="h3 fw-normal">Changes in soil properties</h2>
-              <p class="text-sm text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet officiis</p>
-              <canvas id="lineCahrt"></canvas>
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="card shadow-0 text-center col-4 d-flex container-fluid justify-content-center ">
+              <h2 class="h3 fw-normal" id="invest-heading"> Add Investments </h2>
+                <button class=" btn btn-primary " id="invest-btn" style="border-radius: 5px">Investment plans</button>
+              <!-- <p class="text-sm text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet officiis</p> -->
+              <!-- <canvas id="lineCahrt"></canvas> -->
             </div>
           </div>
+
+          <!-- pricing starts here -->
+        <div  class="pricing " id="add-investment" >
+        <div class="">
+            <div class="">
+              <div class="row">
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12  text-center">
+                  <div class="">
+                     <div class="card mb-4 rounded-3 shadow-sm">
+                       <div class="card-header">
+                         <h4 class="my-0 fw-normal"> Weekly Pack</h4>
+                       </div>
+                       <div class="card-body shadow-lg">
+                         <h1 class="card-title pricing-card-title">3% return<small class="text-muted fw-light">/we</small></h1>
+                         <ul class="list-unstyled mt-3 mb-4">
+                           <li>Membership fee Tshs 3000/=</li>
+                         </ul>
+                         <button type="button" class="w-50 btn  btn-outline-primary" style="border-radius: 5px">Tshs 25,000/=</button>
+                       </div>
+                     </div>
+                   </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 text-center">
+                  <div class="col">
+                     <div class="card mb-4 rounded-3 shadow-sm">
+                       <div class="card-header ">
+                         <h4 class="my-0 fw-normal"> Monthly Pack</h4>
+                       </div>
+                       <div class="card-body shadow-lg">
+                         <h1 class="card-title pricing-card-title">15% return<small class="text-muted fw-light">/mo</small></h1>
+                         <ul class="list-unstyled mt-3 mb-4">
+                           <li>Membership fee Tshs 5000/=</li>
+                         </ul>
+                         <button type="button" class="w-50 btn  btn-outline-primary" style="border-radius: 5px">Tshs 50,000/=</button>
+                       </div>
+                     </div>
+                   </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12  text-center">
+                  <div class="col">
+                     <div class="card mb-4 rounded-3 shadow-sm">
+                       <div class="card-header ">
+                         <h4 class="my-0 fw-normal"> Quarterly Pack</h4>
+                       </div>
+                       <div class="card-body shadow-lg">
+                         <h1 class="card-title pricing-card-title">50% return<small class="text-muted fw-light">/qr</small></h1>
+                         <ul class="list-unstyled mt-3 mb-4">
+                           <li>Membership fee Tshs 7000/=</li>
+                           <li></li>
+                           <li></li>
+                           <li></li>
+                         </ul>
+                         <button type="button" class="w-50 btn  btn-outline-primary style="border-radius: 5px"">Tshs 70,000/=</button>
+                       </div>
+                     </div>
+                   </div>
+               </div>
+              </div>
+               
+
+
+               <div class="row justify-content-center">
+               <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12  text-center">
+                  <div class="">
+                     <div class="card mb-4 rounded-3 shadow-sm">
+                       <div class="card-header ">
+                         <h4 class="my-0 fw-normal"> Quarterly Pack</h4>
+                       </div>
+                       <div class="card-body shadow-lg">
+                         <h1 class="card-title pricing-card-title">50% return<small class="text-muted fw-light">/qr</small></h1>
+                         <ul class="list-unstyled mt-3 mb-4">
+                           <li>Membership fee Tshs 7000/=</li>
+                           <li></li>
+                           <li></li>
+                           <li></li>
+                         </ul>
+                         <button type="button" class="w-50 btn btn-outline-primary " style="border-radius: 5px">Tshs 70,000/=</button>
+                       </div>
+                     </div>
+                   </div>
+               </div>
+               <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 text-center">
+                  <div class="col ">
+                     <div class="card mb-4 rounded-3 shadow-sm">
+                       <div class="card-header ">
+                         <h4 class="my-0 fw-normal"> Quarterly Pack</h4>
+                       </div>
+                       <div class="card-body shadow-lg">
+                         <h1 class="card-title pricing-card-title">50% return<small class="text-muted fw-light">/qr</small></h1>
+                         <ul class="list-unstyled mt-3 mb-4">
+                           <li>Membership fee Tshs 7000/=</li>
+                         </ul>
+                         <button type="button" class="w-50 btn btn-outline-primary" style="border-radius: 5px">Tshs 70,000/=</button>
+                       </div>
+                     </div>
+                   </div>
+               </div>
+               </div>
+               
+               
+            </div>
+         </div>
+          <!-- <div class="container">
+            <div class="row">
+               <div class="col-md-3">
+                  <div class="pricing_box">
+                     <div class="pricing_box_ti">
+                        <h3> <span>3</span>%<strong> return</strong></h3>
+                     </div>
+                     <div class="our_pricing">
+                        <span>weekly</span>
+                        <p> Tshs 3000/= for membership fee </p>
+                     </div>
+                  </div>
+                  <a class="read_more mar_top" href="signin.php">Tshs 25,000/=</a>
+               </div>
+               <div class="col-md-3">
+                  <div class="pricing_box">
+                     <div class="pricing_box_ti">
+                        <h3> <span>15</span>%<strong> return</strong></h3>
+                     </div>
+                     <div class="our_pricing">
+                        <span>monthly</span>
+                        <p> Tshs 5000/= for membership fee </p>
+                     </div>
+                  </div>
+                  <a class="read_more mar_top" href="signin.php">Tshs 50,000/=</a>
+               </div>
+               <div class="col-md-3">
+                  <div class="pricing_box">
+                     <div class="pricing_box_ti">
+                        <h3> <span>50</span>%<strong> return</strong></h3>
+                     </div>
+                     <div class="our_pricing">
+                        <span>Quarterly</span>
+                        <p> Tshs 7000/= for membership fee </p>
+                     </div>
+                  </div>
+                  <a class="read_more mar_top" href="signin.php">Tshs 70,000/=</a>
+               </div>
+               <div class="col-md-3">
+                  <div class="pricing_box">
+                     <div class="pricing_box_ti">
+                        <h3> <span>110</span>%<strong> return</strong></h3>
+                     </div>
+                     <div class="our_pricing">
+                        <span>Half_yearly</span>
+                        <p> Tshs 10,000/= for membership fee </p>
+                     </div>
+                  </div>
+                  <a class="read_more mar_top" href="signin.php">Tshs 100,000/=</a>
+               </div>
+               <div class="col-md-3">
+                  <div class="pricing_box">
+                     <div class="pricing_box_ti">
+                        <h3> <span>200</span>%<strong>return</strong></h3>
+                     </div>
+                     <div class="our_pricing">
+                        <span>Yearly</span>
+                        <p> Tshs 15,000/= for membership fee </p>
+                     </div>
+                  </div>
+                  <a class="read_more mar_top" href="signin.php">Tshs 300,000/=</a>
+               </div>
+            </div>
+         </div> -->
+      </div>
 
           <!-- To Do List-->
           <!-- <div class="col-lg-3 col-md-6">
@@ -321,68 +497,13 @@ $farm_condition = generateRandomSoilConditions();
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6"> -->
-
-            <!-- <div class="card green-card">
-              <div class="card-header">
-                Soil Moisture
-              </div>
-              <div class="card-body">
-                <p>If soil moisture is too low, consider implementing irrigation or adjusting the irrigation schedule to ensure crops receive enough water.</p>
-                <p>If soil moisture is too high, take measures to improve drainage, such as installing drainage tiles or adjusting the slope of the land.</p>
-              </div>
-            </div>
-            <div class="card green-card">
-              <div class="card-header">
-                Soil Temperature
-              </div>
-              <div class="card-body">
-                <p>If soil temperature is too low, consider planting crops that are better suited to cooler temperatures or using techniques like mulching or row covers to retain heat.</p>
-                <p>If soil temperature is too high, consider planting crops that are more heat-tolerant or using techniques like shading or misting to cool the soil.</p>
-              </div>
-            </div>
-            <div class="card green-card">
-              <div class="card-header">
-                pH Level
-              </div>
-              <div class="card-body">
-                <p>If the soil pH is too low, consider adding lime or other soil amendments to raise the pH level and make the soil more alkaline.</p>
-                <p>If the soil pH is too high, consider adding sulfur or other soil amendments to lower the pH level and make the soil more acidic.</p>
-              </div>
-            </div>
-            <div class="card green-card">
-              <div class="card-header">
-                Nitrogen Content
-              </div>
-              <div class="card-body">
-                <p>If the nitrogen content is too low, consider applying nitrogen fertilizers or planting cover crops that fix nitrogen in the soil.</p>
-                <p>If the nitrogen content is too high, consider reducing the amount of nitrogen fertilizer applied or planting crops that are less dependent on nitrogen.</p>
-              </div>
-            </div>
-            <div class="card green-card">
-              <div class="card-header">
-                Phosphorus Content
-              </div>
-              <div class="card-body">
-                <p>If the phosphorus content is too low, consider applying phosphorus fertilizers or planting cover crops that accumulate phosphorus in the soil.</p>
-                <p>If the phosphorus content is too high, consider reducing the amount of phosphorus fertilizer applied or planting crops that are less dependent on phosphorus.</p>
-              </div>
-            </div>
-            <div class="card green-card">
-              <div class="card-header">
-                Potassium Content
-              </div>
-              <div class="card-body">
-                <p>If the potassium content is too low, consider applying potassium fertilizers or planting cover crops that accumulate potassium in the soil.</p>
-                <p>If the potassium content is too high, consider reducing the amount of potassium fertilizer applied or planting crops that are less dependent on potassium.</p>
-              </div>
-            </div> -->
+          
 
           </div>
 
         </div>
       </div>
-    </section>
+    </section> -->
 
 
   </div>
@@ -419,6 +540,7 @@ $farm_condition = generateRandomSoilConditions();
     // pls don't forget to change to your domain :)
     injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
   </script>
+  <script src="pricing.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
