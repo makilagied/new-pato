@@ -86,7 +86,7 @@ $farm_condition = generateRandomSoilConditions();
         <li class="sidebar-item"><a class="sidebar-link" href="soil_management.php">
             <svg class="svg-icon svg-icon-sm svg-icon-heavy me-2">
               <use xlink:href="#sales-up-1"> </use>
-            </svg>Investment Progress </a></li>
+            </svg>Track Progress </a></li>
         <li class="sidebar-item"><a class="sidebar-link" href="crop_survey.php">
             <svg class="svg-icon svg-icon-sm svg-icon-heavy me-2">
               <use xlink:href="#portfolio-grid-1"> </use>
@@ -96,16 +96,23 @@ $farm_condition = generateRandomSoilConditions();
   </nav>
   <div class="page">
     <!-- navbar-->
-    <header class="header mb-5 pb-3">
+    <header class="header  pb-3">
       <nav class="nav navbar fixed-top">
         <div class="container-fluid">
           <div class="d-flex align-items-center justify-content-between w-100">
-            <div class="d-flex align-items-center"><a class="menu-btn d-flex align-items-center justify-content-center p-2 bg-gray-900" id="toggle-btn" href="#">
+            <div class="d-flex align-items-center">
+              <a class="menu-btn d-flex align-items-center justify-content-center p-2 bg-gray-900" id="toggle-btn" href="#">
                 <svg class="svg-icon svg-icon-sm svg-icon-heavy text-white">
-                  <use xlink:href="#menu-1"> </use>
-                </svg></a><a class="navbar-brand ms-2" href="index.html">
-                <div class="brand-text d-none d-md-inline-block text-uppercase letter-spacing-0"><span class="text-white fw-normal text-xs"> </span><strong class="text-primary text-sm">Dashboard</strong></div>
-              </a></div>
+                  <use xlink:href="#menu-1"> Dashboard </use>
+                </svg>
+              </a> 
+              <a class="navbar-brand ms-2" href="index.html">
+                <div class="brand-text d-md-inline-block d-sm-inline-block text-uppercase letter-spacing-0">
+                  <span class="text-white fw-normal text-xs"> </span>
+                  <strong class="text-primary text-sm">Dashboard</strong>
+                </div>
+              </a>
+            </div>
             <ul class="nav-menu mb-0 list-unstyled d-flex flex-md-row align-items-md-center">
 
               <ul class="dropdown-menu dropdown-menu-end mt-sm-3 shadow-sm" aria-labelledby="notifications">
@@ -158,21 +165,21 @@ $farm_condition = generateRandomSoilConditions();
       </nav>
     </header>
     <!-- Counts Section -->
-    <section class="py-5">
+    <section class="py-3">
       <div class="container-fluid">
         <div class="row">
           <!-- Count item widget-->
-          <div class="col-xl-7 col-md-7 col-6 gy-4 gy-xl-0 col-sm-10"  style="box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);">
-            <div class="row " style="border-radius: 10%">
+          <div class="col-xl-7 col-md-7   col-sm-9"  style="box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);">
+            <div class="row  " style="border-radius: 10%">
                   <div class="col-4">
                     <img src="images\profile.jpeg" class="img-fluid rounded-start"  alt="...">
                   </div>
-                  <div class="col-8 sm-9 bg-light p-3">
+                  <div class="col-8 sm-12 bg-light p-3">
                       <h5 class="card-title h1"> <?php echo $_SESSION['user_name'] ?></h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last logged 3 mins ago</small></p>
-                      <div class="offset-lg-9 offset-md-9 offset-sm-9">
-                        <button class=" btn btn-primary" style=" border-radius: 5px;"> Edit </button>
+                      <p class="card-text h5"> Verified Pato Investor</p>
+                      <p class="card-text py-3"><small class="text-muted">Last logged 3 mins ago</small></p>
+                      <div class="offset-lg-9 offset-md-9 offset-sm-9 ">
+                        <button class=" btn btn-primary " style=" border-radius: 5px;"> Edit </button>
                       </div>
                   </div>
             </div>
@@ -270,9 +277,9 @@ $farm_condition = generateRandomSoilConditions();
 
           <!-- Line Chart -->
           <div class="col-lg-12 col-md-12 col-sm-12">
-            <div class="card shadow-0 text-center col-4 d-flex container-fluid justify-content-center ">
+            <div class="card shadow-0 text-center col-lg-5 col-sm-4 d-flex container-fluid justify-content-center ">
               <h2 class="h3 fw-normal" id="invest-heading"> Add Investments </h2>
-                <button class=" btn btn-primary " id="invest-btn" style="border-radius: 5px">Investment plans</button>
+                <button class=" btn btn-primary  " id="invest-btn" style="border-radius: 5px">Investment plans</button>
               <!-- <p class="text-sm text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor amet officiis</p> -->
               <!-- <canvas id="lineCahrt"></canvas> -->
             </div>
@@ -329,7 +336,7 @@ $farm_condition = generateRandomSoilConditions();
                            <li></li>
                            <li></li>
                          </ul>
-                         <button type="button" class="w-50 btn  btn-outline-primary style="border-radius: 5px"">Tshs 70,000/=</button>
+                         <button type="button" class="w-50 btn  btn-outline-primary " style="border-radius: 5px">Tshs 70,000/=</button>
                        </div>
                      </div>
                    </div>
@@ -343,17 +350,14 @@ $farm_condition = generateRandomSoilConditions();
                   <div class="">
                      <div class="card mb-4 rounded-3 shadow-sm">
                        <div class="card-header ">
-                         <h4 class="my-0 fw-normal"> Quarterly Pack</h4>
+                         <h4 class="my-0 fw-normal"> half-yearly Pack</h4>
                        </div>
                        <div class="card-body shadow-lg">
-                         <h1 class="card-title pricing-card-title">50% return<small class="text-muted fw-light">/qr</small></h1>
+                         <h1 class="card-title pricing-card-title">110% return<small class="text-muted fw-light">/qr</small></h1>
                          <ul class="list-unstyled mt-3 mb-4">
-                           <li>Membership fee Tshs 7000/=</li>
-                           <li></li>
-                           <li></li>
-                           <li></li>
+                           <li>Membership fee Tshs 10,000/=</li>
                          </ul>
-                         <button type="button" class="w-50 btn btn-outline-primary " style="border-radius: 5px">Tshs 70,000/=</button>
+                         <button type="button" class="w-50 btn btn-outline-primary " style="border-radius: 5px">Tshs 100,000/=</button>
                        </div>
                      </div>
                    </div>
@@ -362,14 +366,14 @@ $farm_condition = generateRandomSoilConditions();
                   <div class="col ">
                      <div class="card mb-4 rounded-3 shadow-sm">
                        <div class="card-header ">
-                         <h4 class="my-0 fw-normal"> Quarterly Pack</h4>
+                         <h4 class="my-0 fw-normal"> Yearly</h4>
                        </div>
                        <div class="card-body shadow-lg">
-                         <h1 class="card-title pricing-card-title">50% return<small class="text-muted fw-light">/qr</small></h1>
+                         <h1 class="card-title pricing-card-title">200% return<small class="text-muted fw-light">/yr</small></h1>
                          <ul class="list-unstyled mt-3 mb-4">
-                           <li>Membership fee Tshs 7000/=</li>
+                           <li>Membership fee Tshs 15,000/=</li>
                          </ul>
-                         <button type="button" class="w-50 btn btn-outline-primary" style="border-radius: 5px">Tshs 70,000/=</button>
+                         <button type="button" class="w-50 btn btn-outline-primary" style="border-radius: 5px">Tshs 300,000/=</button>
                        </div>
                      </div>
                    </div>

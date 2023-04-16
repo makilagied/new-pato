@@ -21,4 +21,6 @@ const showInvestmentModal = () => {
 
 
 
+
+
 addInvestButton.addEventListener('click', showInvestmentModal );
