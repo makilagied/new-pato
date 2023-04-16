@@ -39,9 +39,9 @@
       </div> -->
       <!-- end loader -->
       <!-- header -->
-      <header>
+      <header class="sticky-top fixed-top">
          <!-- header inner -->
-         <div class="header">
+         <div class="header ">
             <div class="container-fluid">
                <div class="row">
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
@@ -74,6 +74,9 @@
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="contact.html">Contact Us</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="signin.php">User</a>
                               </li>
                            </ul>
                         </div>
@@ -110,7 +113,7 @@
          <div class="container">
             <!-- <div class="row"> -->
            
-                  <form method="post" action="process_login.php" class="container-fluid text-center col-xl-4 col-lg-4 " >
+                  <form method="post" action="process_login.php" class="container-fluid text-center col-xl-4 col-lg-4 col-md-6" >
                      <?php if (isset($_GET['error'])){echo "<button class='btn btn-sm text-danger'>Invalid Credentials </button>";}?>
                      <div class="mb-4  ">
                      <!-- <label for="exampleInputEmail1" class="form-label px-3 ">Email address</label> -->
@@ -157,7 +160,7 @@
                      <h3>Team </h3>
                      <p class="variat" >We are a well equipped team of not only educated but also motivated youths who would stop at nothing to ensure that the set goals and objectives are seen through with in the planned window.</p>
                   </div>
-                  <div class="col-md-2 col-sm-6">
+                  <!-- <div class="col-md-2 col-sm-6">
                      <h3>Useful Link</h3>
                      <ul class="link_menu">
                         <li><a href="index.html">Home</a></li>
@@ -166,13 +169,13 @@
                         <li class="active"><a href="pricing.html">Invest</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                      </ul>
-                  </div>
+                  </div> -->
                   <div class="col-md-4 col-sm-6">
                      <h3>Subscribe</h3>
                      <form class="bottom_form">
                         <a class="right_btn" href="Javascript:void(0)"> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                         <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                        <p >There are many variations of passages </p>
+                        <!-- <p >There are many variations of passages </p> -->
                      </form>
                   </div>
                </div>
@@ -181,7 +184,11 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-10 offset-md-1">
-                        <p>© 2023 All Rights Reserved. Design by  <a href="https://html.design/"> Free Html Templates</a> Customised by makilagied</p>
+                     <p>© 2023 Pato Space.
+                            <!-- Design by   -->
+                           <!-- <a href="https://html.design/"> Free Html Templates</a> -->
+                            <!-- Customised by makilagied -->
+                        </p>
                      </div>
                   </div>
                </div>

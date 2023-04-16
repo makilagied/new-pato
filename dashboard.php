@@ -183,92 +183,11 @@ $farm_condition = generateRandomSoilConditions();
                       </div>
                   </div>
             </div>
-
-
-
-
-
-              <!-- <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
-                <use xlink:href="#user-1"> </use>
-              </svg>
-              <div class="ms-2">
-                <h3 class="h4 text-dark text-uppercase fw-normal">Soil moisture</h3>
-                <p class="text-gray-500 small">(status)</p>
-                <p class="display-6 mb-0"><?php echo $farm_condition['soil_moisture'] ?></p>
-              </div> -->
           </div>
         </div>
       </div>
       
-          <!-- Count item widget-->
-          <!-- <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
-            <div class="d-flex">
-              <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
-                <use xlink:href="#survey-1"> </use>
-              </svg>
-              <div class="ms-2">
-                <h3 class="h4 text-dark text-uppercase fw-normal">Nutrient</h3>
-                <p class="text-gray-500 small">Level</p>
-                <p class="display-6 mb-0"><?php echo $farm_condition['nutrient_content'] ?> </p>
-              </div>
-            </div>
-          </div> -->
-          <!-- Count item widget-->
-          <!-- <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
-            <div class="d-flex">
-              <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
-                <use xlink:href="#list-details-1"> </use>
-              </svg>
-              <div class="ms-2">
-                <h3 class="h4 text-dark text-uppercase fw-normal">pH level</h3>
-                <p class="text-gray-500 small">measured in pH units</p>
-                <p class="display-6 mb-0"><?php echo $farm_condition['pH_level'] ?></p>
-              </div>
-            </div>
-          </div> -->
-          <!-- Count item widget-->
-          <!-- <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
-            <div class="d-flex">
-              <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
-                <use xlink:href="#survey-1"> </use>
-              </svg>
-              <div class="ms-2">
-                <h3 class="h4 text-dark text-uppercase fw-normal">Soil temp..</h3>
-                <p class="text-gray-500 small">(measured in °C)</p>
-                <p class="display-6 mb-0"><?php echo $farm_condition['soil_temp'] ?>° </p>
-              </div>
-            </div>
-          </div> -->
-          <!-- Count item widget-->
-          <!-- <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
-            <div class="d-flex">
-              <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
-                <use xlink:href="#numbers-1"> </use>
-              </svg>
-              <div class="ms-2">
-                <h3 class="h4 text-dark text-uppercase fw-normal">Texture </h3>
-                <p class="text-gray-500 small" title="(measured in parts per million)">make</p>
-                <p class="display-6 mb-0"> <?php echo $farm_condition['soil_texture'] ?></p>
-              </div>
-            </div>
-          </div> -->
-
-
-          <!-- Count item widget-->
-          <!-- <div class="col-xl-2 col-md-4 col-6 gy-4 gy-xl-0">
-            <div class="d-flex">
-              <svg class="svg-icon svg-icon-sm svg-icon-heavy text-primary mt-1 flex-shrink-0">
-                <use xlink:href="#paper-stack-1"> </use>
-              </svg>
-              <div class="ms-2">
-                <h3 class="h4 text-dark text-uppercase fw-normal">Organic Matter </h3>
-                <p class="text-gray-500 small">Content</p>
-                <p class="display-6 mb-0"><?php echo $farm_condition['organic_matter']; ?></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
+          
     </section>
     <!-- Header Section-->
     <section class="bg-white py-5">
@@ -297,11 +216,11 @@ $farm_condition = generateRandomSoilConditions();
                          <h4 class="my-0 fw-normal"> Weekly Pack</h4>
                        </div>
                        <div class="card-body shadow-lg">
-                         <h1 class="card-title pricing-card-title">3% return<small class="text-muted fw-light">/we</small></h1>
+                         <h1 class="card-title pricing-card-title">3% return<small class="text-muted fw-light"></small></h1>
                          <ul class="list-unstyled mt-3 mb-4">
                            <li>Membership fee Tshs 3000/=</li>
                          </ul>
-                         <button type="button" class="w-50 btn  btn-outline-primary" style="border-radius: 5px">Tshs 25,000/=</button>
+                         <button type="button" id="week-pack" class="w-50 btn btn-outline-primary" style="border-radius: 5px">Tshs 25,000/=</button>
                        </div>
                      </div>
                    </div>
@@ -313,11 +232,11 @@ $farm_condition = generateRandomSoilConditions();
                          <h4 class="my-0 fw-normal"> Monthly Pack</h4>
                        </div>
                        <div class="card-body shadow-lg">
-                         <h1 class="card-title pricing-card-title">15% return<small class="text-muted fw-light">/mo</small></h1>
+                         <h1 class="card-title pricing-card-title">15% return<small class="text-muted fw-light"></small></h1>
                          <ul class="list-unstyled mt-3 mb-4">
                            <li>Membership fee Tshs 5000/=</li>
                          </ul>
-                         <button type="button" class="w-50 btn  btn-outline-primary" style="border-radius: 5px">Tshs 50,000/=</button>
+                         <button type="button" id="month-pack" class="w-50 btn  btn-outline-primary" style="border-radius: 5px">Tshs 50,000/=</button>
                        </div>
                      </div>
                    </div>
@@ -329,14 +248,11 @@ $farm_condition = generateRandomSoilConditions();
                          <h4 class="my-0 fw-normal"> Quarterly Pack</h4>
                        </div>
                        <div class="card-body shadow-lg">
-                         <h1 class="card-title pricing-card-title">50% return<small class="text-muted fw-light">/qr</small></h1>
+                         <h1 class="card-title pricing-card-title">50% return<small class="text-muted fw-light"></small></h1>
                          <ul class="list-unstyled mt-3 mb-4">
                            <li>Membership fee Tshs 7000/=</li>
-                           <li></li>
-                           <li></li>
-                           <li></li>
                          </ul>
-                         <button type="button" class="w-50 btn  btn-outline-primary " style="border-radius: 5px">Tshs 70,000/=</button>
+                         <button type="button" id="quarter-pack" class="w-50 btn  btn-outline-primary " style="border-radius: 5px">Tshs 70,000/=</button>
                        </div>
                      </div>
                    </div>
@@ -353,11 +269,11 @@ $farm_condition = generateRandomSoilConditions();
                          <h4 class="my-0 fw-normal"> half-yearly Pack</h4>
                        </div>
                        <div class="card-body shadow-lg">
-                         <h1 class="card-title pricing-card-title">110% return<small class="text-muted fw-light">/qr</small></h1>
+                         <h1 class="card-title pricing-card-title">110% return<small class="text-muted fw-light"></small></h1>
                          <ul class="list-unstyled mt-3 mb-4">
                            <li>Membership fee Tshs 10,000/=</li>
                          </ul>
-                         <button type="button" class="w-50 btn btn-outline-primary " style="border-radius: 5px">Tshs 100,000/=</button>
+                         <button type="button" id="half-year-pack" class="w-50 btn btn-outline-primary " style="border-radius: 5px">Tshs 100,000/=</button>
                        </div>
                      </div>
                    </div>
@@ -369,11 +285,11 @@ $farm_condition = generateRandomSoilConditions();
                          <h4 class="my-0 fw-normal"> Yearly</h4>
                        </div>
                        <div class="card-body shadow-lg">
-                         <h1 class="card-title pricing-card-title">200% return<small class="text-muted fw-light">/yr</small></h1>
+                         <h1 class="card-title pricing-card-title">200% return<small class="text-muted fw-light"></small></h1>
                          <ul class="list-unstyled mt-3 mb-4">
                            <li>Membership fee Tshs 15,000/=</li>
                          </ul>
-                         <button type="button" class="w-50 btn btn-outline-primary" style="border-radius: 5px">Tshs 300,000/=</button>
+                         <button type="button" id="year-pack" class="w-50 btn btn-outline-primary" style="border-radius: 5px">Tshs 300,000/=</button>
                        </div>
                      </div>
                    </div>
@@ -383,131 +299,7 @@ $farm_condition = generateRandomSoilConditions();
                
             </div>
          </div>
-          <!-- <div class="container">
-            <div class="row">
-               <div class="col-md-3">
-                  <div class="pricing_box">
-                     <div class="pricing_box_ti">
-                        <h3> <span>3</span>%<strong> return</strong></h3>
-                     </div>
-                     <div class="our_pricing">
-                        <span>weekly</span>
-                        <p> Tshs 3000/= for membership fee </p>
-                     </div>
-                  </div>
-                  <a class="read_more mar_top" href="signin.php">Tshs 25,000/=</a>
-               </div>
-               <div class="col-md-3">
-                  <div class="pricing_box">
-                     <div class="pricing_box_ti">
-                        <h3> <span>15</span>%<strong> return</strong></h3>
-                     </div>
-                     <div class="our_pricing">
-                        <span>monthly</span>
-                        <p> Tshs 5000/= for membership fee </p>
-                     </div>
-                  </div>
-                  <a class="read_more mar_top" href="signin.php">Tshs 50,000/=</a>
-               </div>
-               <div class="col-md-3">
-                  <div class="pricing_box">
-                     <div class="pricing_box_ti">
-                        <h3> <span>50</span>%<strong> return</strong></h3>
-                     </div>
-                     <div class="our_pricing">
-                        <span>Quarterly</span>
-                        <p> Tshs 7000/= for membership fee </p>
-                     </div>
-                  </div>
-                  <a class="read_more mar_top" href="signin.php">Tshs 70,000/=</a>
-               </div>
-               <div class="col-md-3">
-                  <div class="pricing_box">
-                     <div class="pricing_box_ti">
-                        <h3> <span>110</span>%<strong> return</strong></h3>
-                     </div>
-                     <div class="our_pricing">
-                        <span>Half_yearly</span>
-                        <p> Tshs 10,000/= for membership fee </p>
-                     </div>
-                  </div>
-                  <a class="read_more mar_top" href="signin.php">Tshs 100,000/=</a>
-               </div>
-               <div class="col-md-3">
-                  <div class="pricing_box">
-                     <div class="pricing_box_ti">
-                        <h3> <span>200</span>%<strong>return</strong></h3>
-                     </div>
-                     <div class="our_pricing">
-                        <span>Yearly</span>
-                        <p> Tshs 15,000/= for membership fee </p>
-                     </div>
-                  </div>
-                  <a class="read_more mar_top" href="signin.php">Tshs 300,000/=</a>
-               </div>
-            </div>
-         </div> -->
-      </div>
-
-          <!-- To Do List-->
-          <!-- <div class="col-lg-3 col-md-6">
-            <div class="card shadow-0">
-              <div class="card-body p-0">
-                <h2 class="h3 fw-normal">To do List</h2> -->
-                <!-- <form>
-                  <h5>Actions to take based on soil changes:</h5>
-                  <?php $i = rand(1, 3);
-                  if ($i < 2) { ?>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list1">
-                      <label class="form-check-label text-sm" for="list1">Soil pH is too low, add lime to raise soil pH.</label>
-                    </div>
-                  <?php } else { ?>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list2">
-                      <label class="form-check-label text-sm" for="list2">Soil pH is too high, add sulfur to lower soil pH.</label>
-                    </div>
-                  <?php } ?>
-
-                  <?php $i = rand(1, 3);
-                  if ($i < 2) { ?>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list3">
-                      <label class="form-check-label text-sm" for="list3">Nitrogen content is too low, add nitrogen-rich fertilizers to improve plant growth.</label>
-                    </div>
-                  <?php } else { ?>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list4">
-                      <label class="form-check-label text-sm" for="list4">Nitrogen content is too high, reduce the use of nitrogen fertilizers or switch to using organic fertilizers.</label>
-                    </div>
-                  <?php } ?>
-                  <?php $i = rand(1, 3);
-                  if ($i < 2) { ?>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list5">
-                      <label class="form-check-label text-sm" for="list5">Organic matter content is too low, consider adding compost or other organic matter to the soil to improve soil structure and fertility.</label>
-                    </div>
-                  <?php } else { ?>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="list6">
-                      <label class="form-check-label text-sm" for="list6">Organic matter content is too high, consider reducing the amount of organic matter added or planting crops that are less tolerant of high organic matter levels.</label>
-                    </div>
-                  <?php } ?>
-                </form> -->
-                <!-- for demonstration -->
-
-
-              <!-- </div>
-            </div>
-          </div>
-
           
-
-          </div>
-
-        </div>
-      </div>
-    </section> -->
 
 
   </div>
