@@ -708,6 +708,7 @@ ul.social_icon li a:hover {
 
 .experts .experts_box .experts_img figure {
      margin: 0;
+     border-radius: 5px;
 }
 
 .experts .experts_box .experts_img figure img {
@@ -724,6 +725,7 @@ ul.social_icon li a:hover {
      border-bottom: #2e2e2e solid 20px;
      border-left: #2e2e2e solid 30px;
      border-right: #2e2e2e solid 30px;
+     border-radius: 5px;
 }
 
 .experts .experts_box .meet {

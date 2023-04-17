@@ -205,6 +205,7 @@ $farm_condition = generateRandomSoilConditions();
           </div>
 
           <!-- pricing starts here -->
+        <form >
         <div  class="pricing1 " id="add-investment" >
         <div class="">
             <div class="">
@@ -295,14 +296,15 @@ $farm_condition = generateRandomSoilConditions();
                    </div>
                </div>
                </div>
-               
-               
             </div>
          </div>
-          
+        </div>
+
+        </form>
 
 
-  </div>
+
+
   <!-- JavaScript files-->
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/chart.js/Chart.min.js"></script>
