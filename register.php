@@ -1,4 +1,6 @@
-
+<?php
+include "dbconfig.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +41,7 @@
       </div> -->
       <!-- end loader -->
       <!-- header -->
-      <header>
+      <header class="sticky-top fixed-top">
          <!-- header inner -->
          <div class="header">
             <div class="container-fluid">
@@ -75,6 +77,9 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="contact.html">Contact Us</a>
                               </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="signin.php">User</a>
+                              </li>
                            </ul>
                         </div>
                      </nav>
@@ -82,9 +87,9 @@
                   <div class="col-md-2">
                      <ul class="social_icon">
                         <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/PatoSpace2?t=x3U5COBgivHGoustWfWCtQ&s=08"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://instagram.com/patospace_101?igshid=ZDdkNTZiNTM="><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                      </ul>
                   </div>
                </div>
@@ -99,7 +104,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="title">
-                     <h2>welcome</h2>
+                     <h2>register here</h2>
                   </div>
                </div>
             </div>
@@ -108,32 +113,119 @@
       <!-- our pricing -->
       <div  class="pricing slin">
          <div class="container">
-            <!-- <div class="row"> -->
+            <div class="container-fluid text-center col-xl-6 col-lg-6">
+              <!-- <div class="text-center col-xl-6 col-lg-6 "> -->
            
-                  <form class="container-fluid text-center col-xl-4 col-lg-4 " >
-                     <div class="mb-4  ">
-                     <!-- <label for="exampleInputEmail1" class="form-label px-3 ">Email address</label> -->
-                     <input type="email" class="form-control" placeholder="Email address"  id="exampleInputEmail1" class="form-signin" aria-describedby="emailHelp">
-                     </div>
-                     <div class="mb-4 ">
-                     <!-- <label for="exampleInputPassword1" class="form-label px-3">Password</label> -->
-                     <input type="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
-                     </div>
-                     <div class="mb-4 form-check ">
-                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                     <label class="form-check-label" for="exampleCheck1">Remember-me!</label>
-                     </div>
-                     <button type="submit" class="btn btn-primary">Sign in</button>
-                     <div class="mb-4 text-center">
-                     <label>Don't have an account?</label>
-                     <div class="nav-link btn-link">
-                        <a class="nav-link btn-link" href="register.html">Register here</a>
-                     </div>
-                     </div>
-                  </form>
+               <form method="post" action="process_registration.php">
+                    <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="first_name" name="first_name" placeholder="First Name" class="form-control" />
+                        <!-- <label class="form-label"  for="firstName">First Name</label> -->
+                      </div>
+                    </div>
+
+                    <!-- <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="midName" placeholder="Middle Name" class="form-control" />
+                        <label class="form-label"  for="firstName">First Name</label>
+                      </div>
+                    </div> -->
+
+                    <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="surname" name="surname"  placeholder="Surname" class="form-control" />
+                        <!-- <label class="form-label" for="lastName">Last Name</label> -->
+                      </div>
+                    </div>
+
+                    <div class=" mb-4">
+                      <div class="form-outline datepicker">
+                        <input type="text" class="form-control" id="dob" name="dob" placeholder="Birthday date"/>
+                        <!-- <label for="birthdayDate" class="form-label">Birthday</label> -->
+                      </div>
+                    </div>
+
+                    <div class="justify-content-center text-center  mb-4">
+                        <label for="gender" class="form-label" id="gender" >Choose Gender</label>
+                           <div class=" form-check-inline">
+                              <label class="form-check-label" for="inlineCheckbox1">
+                                 <input class="form-check-input" type="radio" id="inlineCheckbox1" name="gender" value="male">
+                                 male</label>
+
+                              <label class="form-check-label" for="inlineCheckbox2">
+                                 <input class="form-check-input" type="radio" id="inlineCheckbox2" name="gender" value="female">
+                                 female</label>
+                           </div>
+                        <!-- <div class=" form-check-inline">
+                          
+                        </div> -->
+                    </div>
+
+                    <!-- <div class="justify-content-center text-center  mb-4">
+                        <label for="gender" class="form-label">Martial status</label>
+                        <div class=" form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox1">married</label>
+                        </div>
+                        <div class=" form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                          <label class="form-check-label" for="inlineCheckbox2">single</label>
+                        </div>
+                    </div> -->
+
+                    <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="email" id="email" name="email" placeholder="Email" class="form-control" />
+                        <!-- <label class="form-label" for="emailAddress">Email</label> -->
+                      </div>
+                    </div>
+
+                    <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="tel" id="phone" name="phone" placeholder="Mobile Number" class="form-control" />
+                        <!-- <label class="form-label" for="phoneNumber">Phone Number</label> -->
+                      </div>
+                    </div>
+
+                    <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="password" id="password" name="password" placeholder="password" class="form-control" />
+                        <!-- <label class="form-label" for="password">password</label> -->
+                      </div>
+                    </div>
+
+                    <div class=" mb-4">
+                      <div class="form-outline">
+                        <input type="password" id="conf_password" name="conf_password" placeholder="confirm password" class="form-control" />
+                        <!-- <label class="form-label" for="cpassword">confirm password</label> -->
+                      </div>
+                    </div>
+
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="col-12">
+                      <div class="col-md-4 mb-4">    
+                        <div class="mt-4">
+                          <input class="btn btn-warning btn-lg" type="submit" value="Submit" />
+                        </div>     
+                      </div>
+                    </div>
+
+                </form>
                <!-- </div> -->
             </div>
          </div>
+      </div>
       <!-- end our pricing -->
      
       <!--  footer -->
@@ -145,7 +237,7 @@
                      <ul class="conta">
                         <li><i class="fa fa-map-marker" aria-hidden="true"></i> Passages of Lorem Ipsum available</li>
                         <li><i class="fa fa-phone" aria-hidden="true"></i> Call : +012334567890</li>
-                        <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> demo@gmail.com</a></li>
+                        <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="www.patospace2022@gmail.com"> Patospace 2022</a></li>
                      </ul>
                   </div>
                   <div class=" col-md-3 col-sm-6">
@@ -156,7 +248,7 @@
                      <h3>Team </h3>
                      <p class="variat" >We are a well equipped team of not only educated but also motivated youths who would stop at nothing to ensure that the set goals and objectives are seen through with in the planned window.</p>
                   </div>
-                  <div class="col-md-2 col-sm-6">
+                  <!-- <div class="col-md-2 col-sm-6">
                      <h3>Useful Link</h3>
                      <ul class="link_menu">
                         <li><a href="index.html">Home</a></li>
@@ -165,13 +257,13 @@
                         <li class="active"><a href="pricing.html">Invest</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                      </ul>
-                  </div>
+                  </div> -->
                   <div class="col-md-4 col-sm-6">
                      <h3>Subscribe</h3>
                      <form class="bottom_form">
                         <a class="right_btn" href="Javascript:void(0)"> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                         <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                        <p >There are many variations of passages </p>
+                        <!-- <p >There are many variations of passages </p> -->
                      </form>
                   </div>
                </div>
@@ -180,7 +272,11 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-10 offset-md-1">
-                        <p>© 2023 All Rights Reserved. Design by  <a href="https://html.design/"> Free Html Templates</a> Customised by makilagied</p>
+                     <p>© 2023 Pato Space.
+                            <!-- Design by   -->
+                           <!-- <a href="https://html.design/"> Free Html Templates</a> -->
+                            <!-- Customised by makilagied -->
+                        </p>
                      </div>
                   </div>
                </div>

@@ -480,8 +480,9 @@ ul.social_icon li a:hover {
      border-radius: 4px;
      border-color: #404040;
 
-
 }
+
+
 
 .read_more:hover {
      background: #fa8c17;
@@ -603,6 +604,11 @@ ul.social_icon li a:hover {
      padding: 90px 0 170px 0;
      position: relative;
 }
+.pricing1 {
+     background-color: #fff;
+     /* padding: 90px 0 170px 0; */
+     position: relative;
+}
 
 .pricing .titlepage {
      text-align: center;
@@ -611,7 +617,7 @@ ul.social_icon li a:hover {
 
 .pricing_box {
      border: #727272 solid 1px;
-     padding: 74px 101px 80px 101px;
+     padding: 60px 90px 70px 90px;
 }
 
 .pricing_box_ti {
@@ -702,6 +708,7 @@ ul.social_icon li a:hover {
 
 .experts .experts_box .experts_img figure {
      margin: 0;
+     border-radius: 5px;
 }
 
 .experts .experts_box .experts_img figure img {
@@ -718,6 +725,7 @@ ul.social_icon li a:hover {
      border-bottom: #2e2e2e solid 20px;
      border-left: #2e2e2e solid 30px;
      border-right: #2e2e2e solid 30px;
+     border-radius: 5px;
 }
 
 .experts .experts_box .meet {
