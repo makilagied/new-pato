@@ -391,7 +391,7 @@ ul.social_icon li a:hover {
 }
 
 .get_btn:hover {
-     color: #fa8c17;
+     color: #2eb613;
 }
 
 .bann_img {
@@ -485,7 +485,7 @@ ul.social_icon li a:hover {
 
 
 .read_more:hover {
-     background: #fa8c17;
+     background: #2eb613;
      color: #fff;
      transition: ease-in all 0.5s;
 }
@@ -641,7 +641,7 @@ ul.social_icon li a:hover {
 }
 
 .pricing_box_ti h3 span {
-     color: #7321cd;
+     color: #2eb613;
 }
 
 .pricing_box_ti h3 strong {
@@ -712,7 +712,8 @@ ul.social_icon li a:hover {
 }
 
 .experts .experts_box .experts_img figure img {
-     width: 100%;
+     width: 300px;
+    height: 360px;
      transition: all .5s;
      border-top: #e2e2e2 solid 20px;
      border-bottom: #e2e2e2 solid 20px;
@@ -730,7 +731,7 @@ ul.social_icon li a:hover {
 
 .experts .experts_box .meet {
      padding: 33px 30px;
-     text-align: center;
+     text-align: flex-start;
 }
 
 .experts .experts_box .meet h3 {
@@ -823,7 +824,7 @@ ul.social_icon li a:hover {
 }
 
 .main_form .send_btn:hover {
-     background-color: #fa8c17;
+     background-color: #2eb613;
      transition: ease-in all 0.5s;
      color: #fff;
 }
@@ -896,7 +897,7 @@ ul.link_menu li {
 }
 
 ul.link_menu li.active a {
-     color: #fa8c17;
+     color: #2eb613;
 }
 
 ul.link_menu li a {
@@ -908,7 +909,7 @@ ul.link_menu li a {
 }
 
 ul.link_menu li a:hover {
-     color: #fa8c17;
+     color: #2eb613;
 }
 
 .bottom_form {
@@ -945,7 +946,7 @@ ul.link_menu li a:hover {
 .right_btn {
      font-size: 17px;
      transition: ease-in all 0.5s;
-     background-color: #fa8c17;
+     background-color: #2eb613;
      color: #fff;
      padding: 8px 16px;
      font-weight: 500;
@@ -958,7 +959,7 @@ ul.link_menu li a:hover {
 .right_btn:hover {
      background-color: #ddd;
      transition: ease-in all 0.5s;
-     color: #fa8c17;
+     color: #2eb613;
 }
 
 .bottom_form p {
@@ -988,7 +989,7 @@ ul.link_menu li a:hover {
 }
 
 .copyright a:hover {
-     color: #fa8c17;
+     color: #2eb613;
 }
 
 
