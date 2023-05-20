@@ -687,7 +687,7 @@ ul.social_icon li a:hover {
 
 .experts {
      background-color: #fff;
-     padding: 90px 0 147px 0;
+     /* padding: 90px 0 147px 0; */
      position: relative;
 }
 
@@ -697,7 +697,7 @@ ul.social_icon li a:hover {
 }
 
 .experts .experts_box {
-     text-align: left;
+     text-align: center;
      background-color: #fff;
      transition: ease-in all 0.5s;
 }
@@ -731,7 +731,7 @@ ul.social_icon li a:hover {
 
 .experts .experts_box .meet {
      padding: 33px 30px;
-     text-align: flex-start;
+     text-align: center;
 }
 
 .experts .experts_box .meet h3 {
